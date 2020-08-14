@@ -15,7 +15,7 @@ ON Aluno
 FOR UPDATE 
 AS	
 	INSERT INTO Aluno_hist(IdAluno,Nome,Ra,Idade,DataDelete)
-	SELECT IdAluno,Nome,Ra,Idade,GETDATE() FROM deleted;
+	SELECT IdAluno,Nome,Ra,Idade,GETDATE() FROM DELETED;
 
 /*INSERT - Com Dados Adicionados com Sucesso*/
 CREATE TRIGGER Tgr_onInsertNome
