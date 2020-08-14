@@ -9,6 +9,7 @@ CREATE TABLE Aluno_hist(
 	DataDelete DATETIME
 );
 
+
 /*UPDATE - Tabela com os Dados Excluidos*/
 CREATE TRIGGER Tgr_Backup_Aluno 
 ON Aluno 
@@ -20,7 +21,7 @@ AS
 /*INSERT - Com Dados Adicionados com Sucesso*/
 CREATE TRIGGER Tgr_onInsertNome
 ON Aluno 
-FOR INSERT s
+FOR INSERT 
 AS 
 	IF (SELECT COUNT (*) FROM INSERTED ) = 1
 			PRINT ' Dados Inseridos com Sucesso em Aluno';
